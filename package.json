@@ -1,57 +1,52 @@
 {
-  "version": "0.0.1",
-  "name": "collection",
-  "description": "Personal knowledge  collection.",
-  "author": "lvdengming@foxmail.com",
-  "license": "MIT",
-  "main": "index.js",
-  "keywords": [
-    "collection"
-  ],
-  "scripts": {
-    "prepare": "husky",
-    "format": "prettier --write ."
-  },
-  "devDependencies": {
-    "commitlint": "^19.2.0",
-    "eslint": "^8.57.0",
-    "husky": "^9.0.11",
-    "lint-staged": "^15.2.2",
-    "prettier": "^3.2.5",
-    "stylelint": "^16.2.1",
-    "stylelint": "^16.1.0",
+    "version": "0.0.1",
+    "name": "collection",
+    "description": "Personal knowledge  collection.",
+    "author": "lvdengming@foxmail.com",
+    "license": "MIT",
+    "main": "index.js",
+    "keywords": [
+        "collection"
+    ],
+    "scripts": {
+        "prepare": "husky",
+        "format": "prettier --write ."
+    },
+    "devDependencies": {
+        "commitlint": "^19.2.0",
+        "husky": "^9.0.11",
+        "lint-staged": "^15.2.2",
+        "prettier": "^3.2.5",
+        "stylelint": "^16.2.1",
+        "stylelint": "^16.1.0",
         "stylelint-config-standard": "^36.0.0",
         "typescript": "~5.3.0",
         "@commitlint/cli": "^18.4.4",
         "@commitlint/config-conventional": "^18.4.4"
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "eslint --fix",
-      "prettier --write"
-    ],
-    "*.{css,scss,less}": [
-      "stylelint --fix",
-      "prettier --write"
-    ],
-    "*.{html,md}": [
-      "prettier --write"
-    ]
-  },
-  "prettier": {
-    "$schema": "https://json.schemastore.org/prettierrc",
-    "semi": true,
-    "tabWidth": 4,
-    "singleQuote": true,
-    "printWidth": 100,
-    "trailingComma": "none"
-  },
-  "stylelint": {
-    "extends": "stylelint-config-standard"
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  }
+    },
+    "lint-staged": {
+        "*.{js,jsx,ts,tsx,html,md}": [
+            "prettier --write"
+        ],
+        "*.{css,scss,less}": [
+            "stylelint --fix",
+            "prettier --write"
+        ]
+    },
+    "prettier": {
+        "$schema": "https://json.schemastore.org/prettierrc",
+        "semi": true,
+        "tabWidth": 4,
+        "singleQuote": true,
+        "printWidth": 100,
+        "trailingComma": "none"
+    },
+    "stylelint": {
+        "extends": "stylelint-config-standard"
+    },
+    "commitlint": {
+        "extends": [
+            "@commitlint/config-conventional"
+        ]
+    }
 }
