@@ -11,8 +11,8 @@
     "scripts": {
         "prepare": "husky",
         "dev": "cross-env-shell ts-node src/$npm_config_path",
-        "dev:other": "cross-env-shell ts-node src/others/$npm_config_file",
         "dev:pattern": "cross-env-shell ts-node src/design-patterns/$npm_config_file",
+        "dev:other": "cross-env-shell ts-node src/others/$npm_config_file",
         "format": "prettier --write ."
     },
     "devDependencies": {
