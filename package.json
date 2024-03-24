@@ -10,9 +10,11 @@
     ],
     "scripts": {
         "prepare": "husky",
-        "dev": "cross-env-shell ts-node src/$npm_config_path",
-        "dev:pattern": "cross-env-shell ts-node src/design-patterns/$npm_config_file",
-        "dev:other": "cross-env-shell ts-node src/others/$npm_config_file",
+        "dev": "cross-env-shell node scripts/dev.cjs --path $npm_config_path",
+        "dev:behavioral": "cross-env-shell node scripts/dev.cjs --path design-patterns/behavioral/$npm_config_file",
+        "dev:creational": "cross-env-shell node scripts/dev.cjs --path design-patterns/creational/$npm_config_file",
+        "dev:structural": "cross-env-shell node scripts/dev.cjs --path design-patterns/structural/$npm_config_file",
+        "dev:other": "cross-env-shell node scripts/dev.cjs --path others/$npm_config_file",
         "format": "prettier --write ."
     },
     "devDependencies": {
@@ -20,8 +22,10 @@
         "@commitlint/config-conventional": "^18.4.4",
         "commitlint": "^19.2.0",
         "cross-env": "^7.0.3",
+        "dayjs": "^1.11.10",
         "husky": "^9.0.11",
         "lint-staged": "^15.2.2",
+        "minimist": "^1.2.8",
         "prettier": "^3.2.5",
         "stylelint": "^16.1.0",
         "stylelint-config-standard": "^36.0.0",
