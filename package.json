@@ -14,6 +14,7 @@
         "dev:behavioral": "cross-env-shell node scripts/dev.cjs --path design-patterns/behavioral/$npm_config_file",
         "dev:creational": "cross-env-shell node scripts/dev.cjs --path design-patterns/creational/$npm_config_file",
         "dev:structural": "cross-env-shell node scripts/dev.cjs --path design-patterns/structural/$npm_config_file",
+        "dev:manual": "cross-env-shell node scripts/dev.cjs --path manual/$npm_config_file",
         "dev:other": "cross-env-shell node scripts/dev.cjs --path others/$npm_config_file",
         "format": "prettier --write ."
     },
