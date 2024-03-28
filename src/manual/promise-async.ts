@@ -26,7 +26,7 @@ class MyPromise {
             }
 
             this.__value = value;
-            this.__onFulfilledCallbacks.forEach((callback) => callback());
+            this.__onFulfilledCallbacks.forEach(callback => callback());
             this.__status = PromiseStatus.FULFILLED;
         };
 
@@ -36,7 +36,7 @@ class MyPromise {
             }
 
             this.__reason = reason;
-            this.__onRejectedCallbacks.forEach((callback) => callback());
+            this.__onRejectedCallbacks.forEach(callback => callback());
             this.__status = PromiseStatus.REJECTED;
         };
 
@@ -72,11 +72,11 @@ const promise = new MyPromise((resolve, reject) => {
 });
 
 promise.then(
-    (value) => {
+    value => {
         console.log('In onFulfilled callback...');
         console.log(value);
     },
-    (reason) => {
+    reason => {
         console.log('In onRejected callback...');
         console.log(reason);
     }

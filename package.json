@@ -49,7 +49,8 @@
         "tabWidth": 4,
         "singleQuote": true,
         "printWidth": 100,
-        "trailingComma": "none"
+        "trailingComma": "none",
+        "arrowParens": "avoid"
     },
     "stylelint": {
         "extends": "stylelint-config-standard"

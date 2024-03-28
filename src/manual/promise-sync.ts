@@ -58,11 +58,11 @@ const promise = new MyPromise((resolve, reject) => {
 });
 
 promise.then(
-    (value) => {
+    value => {
         console.log('In onFulfilled callback...');
         console.log(value);
     },
-    (reason) => {
+    reason => {
         console.log('In onRejected callback...');
         console.log(reason);
     }

@@ -9,7 +9,7 @@ const rl = readline.createInterface({
 
 const limit = 20; // 模拟提取时长
 
-const printProgress = (index) => {
+const printProgress = index => {
     const loadedBar = '='.repeat(index);
     const unloadBar = '-'.repeat(limit - index);
     readline.cursorTo(process.stdout, 0, 0);
@@ -25,7 +25,7 @@ const print = (money, index) => {
     }
 };
 
-const getMoney = (answer) => {
+const getMoney = answer => {
     let index = 0;
     setInterval(() => {
         ++index;
