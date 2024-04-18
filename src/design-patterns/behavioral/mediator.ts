@@ -1,4 +1,4 @@
-// 中介模式【行为型模式】
+// 中介者模式【行为型模式】
 // 记忆案例：对话框中的子元素不需要直接相互通信，而是直接通过对话框来通信
 // 章节：https://refactoringguru.cn/design-patterns/mediator
 // 代码：https://refactoringguru.cn/design-patterns/mediator/typescript/example
