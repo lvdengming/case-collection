@@ -1,32 +1,20 @@
 # case-collection
 
-A personal collection of cases, including design patterns, interview handwriting series, and a collection of common functions.
+[中文/Chinese](./README.md)
+
+Personal Code Collection: Design Patterns, Utility Functions, and More
+
+## AST Source Code Implementation and Applications
+
+-   Handwritten AST source code to transform LISP language into C language.
 
 ## Design Patterns
 
-The cases currently included are as follows, with more to be added:
+Complete code examples for all creational, structural, and behavioral design patterns.
 
-Creational:
+## Miscellaneous
 
-Structural:
-
--   Observer Pattern
-
-Behavioral:
-
--   Adapter Pattern
--   Bridge Pattern
--   Composite Pattern
--   Decorator Pattern
--   Facade Pattern
-
-## Interview Handwriting Series
-
--   Handwritten Promise Synchronous Version
--   Handwritten Promise Asynchronous Version
--   todo Handwritten Promise Complete Version (including chaining & value penetration)
-
-## Others
-
--   Quickly get a YYYY-MM-DD format time string
--   Implement a command line progress bar with nodejs
+-   Quickly generate a date string in `YYYY-MM-DD` format.
+-   Implement a command-line progress bar using Node.js.
+-   Generate random strings and random colors.
+-   Examine the compiled output of ES6 `class` syntax into ES5.
