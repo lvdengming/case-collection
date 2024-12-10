@@ -9,3 +9,5 @@ LISP 源代码：`(add 2 (subtract 4 2))`
 C 目标代码：`add(2, subtract(4, 2))`
 
 > 代码实现中，JSDoc 使用不熟练没有深入使用
+
+参考博客：[https://juejin.cn/post/7155151377013047304/](https://juejin.cn/post/7155151377013047304/)
