@@ -7,7 +7,7 @@ const renameFuncPlugin = {
         Identifier: path => {
             const { node } = path;
             if (node.name === 'hello') {
-                node.nme = 'world';
+                node.name = 'world';
             }
         }
     }
