@@ -1,4 +1,4 @@
-// 2# 用 babel-plugin-transform-es2015-arrow-functions 插件转换箭头函数为普通函数
+// 用 babel-plugin-transform-es2015-arrow-functions 插件转换箭头函数为普通函数
 const core = require('@babel/core');
 const arrowTransformPlugin = require('babel-plugin-transform-es2015-arrow-functions');
 

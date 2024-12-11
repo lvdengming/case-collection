@@ -1,4 +1,4 @@
-// 1# 小试牛刀：修改函数名
+// 用抽象语法树-转换-生成代码步骤修改函数名
 const parser = require('@babel/parser');
 const traverse = require('@babel/traverse');
 const generator = require('@babel/generator');
