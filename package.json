@@ -66,5 +66,9 @@
         "extends": [
             "@commitlint/config-conventional"
         ]
+    },
+    "dependencies": {
+        "express": "^5.1.0",
+        "http-proxy-middleware": "^3.0.3"
     }
 }

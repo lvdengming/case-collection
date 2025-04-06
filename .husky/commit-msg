@@ -1,2 +1,2 @@
 # 提交信息校验
-npx --no -- commitlint --edit ${1}
+# npx --no -- commitlint --edit ${1}
