@@ -1,0 +1,39 @@
+<!--
+ * @Author: lvdengming@foxmail.com
+ * @Date: 2025-04-10 22:32:17
+ * @LastEditors: lvdengming@foxmail.com
+ * @LastEditTime: 2025-04-10 22:55:23
+-->
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>web worker</title>
+    </head>
+    <body>
+        <script>
+            const START = Date.now();
+            let lastTime = START;
+
+            const worker = new Worker('worker.js');
+            const config = {
+                maxCount: 10,
+                interval: 1000
+            };
+            worker.postMessage(config);
+
+            worker.addEventListener('message', e => {
+                if (e.data === 'done') {
+                    worker.terminate();
+                    console.log(`incremented ${config.maxCount} times in ${lastTime - START}ms`);
+                } else {
+                    const now = Date.now();
+                    const elapsed = now - lastTime;
+                    console.log(`count: ${e.data}, elapsed: ${elapsed}ms`);
+                    lastTime = now;
+                }
+            });
+        </script>
+    </body>
+</html>

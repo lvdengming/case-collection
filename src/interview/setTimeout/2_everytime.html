@@ -1,0 +1,42 @@
+<!--
+ * @Author: lvdengming@foxmail.com
+ * @Date: 2025-04-10 22:26:43
+ * @LastEditors: lvdengming@foxmail.com
+ * @LastEditTime: 2025-04-10 22:30:14
+-->
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>修改定时器回调函数，每次执行函数时修正定时器</title>
+    </head>
+    <body>
+        <script>
+            const TOTAL = 10;
+            const START = Date.now();
+            const INTERVAL = 1000;
+            let count = 0;
+            let lastTime = START;
+
+            function countIncrement() {
+                if (count > TOTAL) {
+                    const elapsed = lastTime - START;
+                    console.log(`incremented ${TOTAL} times in ${elapsed}ms`);
+                    return;
+                }
+
+                const now = Date.now();
+                const elapsed = now - lastTime;
+                console.log(`count: ${count}, elapsed: ${elapsed}ms`);
+
+                const pastTime = now - START;
+                count = Math.ceil(pastTime / INTERVAL);
+                lastTime = now;
+                timer = setTimeout(countIncrement, (TOTAL * INTERVAL - pastTime) % INTERVAL);
+            }
+
+            countIncrement();
+        </script>
+    </body>
+</html>
