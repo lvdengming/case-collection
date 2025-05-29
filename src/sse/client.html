@@ -1,0 +1,57 @@
+<!--
+ * @Author: lvdengming@foxmail.com
+ * @Date: 2025-05-29 07:36:51
+ * @LastEditors: lvdengming@foxmail.com
+ * @LastEditTime: 2025-05-29 08:02:10
+-->
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SSE 连接测试</title>
+    </head>
+    <body>
+        <h3>实时计数器监控</h3>
+        <div id="output">等待数据连接...</div>
+
+        <script>
+            const es = new EventSource('http://localhost:3000/api/sse', {
+                // 不需要携带 Cookie，这样跨域处理更简单
+                withCredentials: false
+            });
+
+            const output = document.getElementById('output');
+            es.addEventListener(
+                'open',
+                () => {
+                    output.innerHTML = '';
+                    addMessage(`[系统] 连接已建立 ${new Date().toLocaleTimeString()}\n`);
+                },
+                false
+            );
+            es.addEventListener(
+                'ping',
+                e => {
+                    addMessage(`[提示] ping - ${e.data}`);
+                },
+                false
+            );
+
+            es.addEventListener(
+                'message',
+                e => {
+                    const data = JSON.parse(e.data);
+                    addMessage(`[${new Date().toLocaleTimeString()}] ${data.message}`);
+                },
+                false
+            );
+
+            function addMessage(message) {
+                const p = document.createElement('p');
+                p.textContent = message;
+                output.appendChild(p);
+            }
+        </script>
+    </body>
+</html>
